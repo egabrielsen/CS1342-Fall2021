@@ -29,7 +29,7 @@ class Distance {
 
   // overloaded < operator
   bool operator<(const Distance& d) {
-    if (feet < d.feet) {
+    if (this->feet < d.feet) {
       return true;
     }
     if (feet == d.feet && inches < d.inches) {

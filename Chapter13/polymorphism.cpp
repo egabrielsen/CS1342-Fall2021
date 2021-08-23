@@ -30,7 +30,7 @@ class Student : public Person {
   }
 
   void print() {
-    Person::print();
+    // Person::print();
     cout << "StudentId: " << studentId << endl;
   }
 };
@@ -45,7 +45,7 @@ class Professor : public Person {
   }
 
   void print() {
-    Person::print();
+    // Person::print();
     cout << "FacultyId: " << facultyId << endl;
   }
 };
@@ -55,25 +55,12 @@ int main() {
   Student *student = new Student(321, "Tim", "5125431455", 19);
   Professor *professor = new Professor(123, "Chris", "214502954903", 40);
 
-  Person *object1 = student;
-
-  object1->print();  // use the derived version of that function
-
-  Person *p1 = student;
-  p1->print();
-
-  vector<int> number;
-
   vector<Person *> people;  // vector of memory addresses
   people.push_back(student);
   people.push_back(professor);
 
   for (int i = 0; i < people.size(); i++) {
     people.at(i)->print();
-  }
-
-  for (int i = 0; i < people.size(); i++) {
-    cout << people.at(i) << endl;
   }
 
   return 0;

@@ -10,7 +10,7 @@ class GenericItem {
 
   void PrintItem() { cout << itemName << " " << itemQuantity << endl; };
 
- private:
+ protected:
   string itemName;
   int itemQuantity;
 };
@@ -19,7 +19,10 @@ class ProduceItem : public GenericItem {  // Derived from GenericItem
  public:
   void SetExpiration(string newDate) { expirationDate = newDate; };
 
-  string GetExpiration() { return expirationDate; };
+  string GetExpiration() {
+    cout << this->itemName << endl;
+    return expirationDate;
+  };
 
  private:
   string expirationDate;
