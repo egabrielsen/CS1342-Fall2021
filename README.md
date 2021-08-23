@@ -1,6 +1,6 @@
 # Lecture-Materials
 
-All lecture materials for CS 1342 July Term
+All lecture materials for CS 1342 Fall 2021 Term
 
 ### Sample Code
 
