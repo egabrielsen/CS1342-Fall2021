@@ -16,7 +16,6 @@ int main() {
   // TODO: Implement solution
   double xDist = pow(x2 - x1, 2);
   double yDist = pow(y2 - y1, 2);
-
   totalDistance = sqrt(xDist + yDist);
 
   cout << "Distance between points: " << totalDistance << endl;
