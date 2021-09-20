@@ -3,27 +3,22 @@
 using namespace std;
 
 int main() {
-  int input;
-  int sum{0};
+  int input{0};
   int count{0};
-  double average{0};
+  int sum{0};
 
-  cout << "Enter a number:";
+  cout << "Enter a number: " << endl;
   cin >> input;
 
-  // implement while loop
   while (input != 0) {
     sum += input;
     count++;
 
-    cout << "Enter a number:";
+    cout << "Enter a number: " << endl;
     cin >> input;
   }
 
-  average = static_cast<double>(sum) / count;
-
-  cout << "Sum: " << sum << endl;
-  cout << "Average: " << average << endl;
+  double average = static_cast<double>(sum) / count;
 
   return 0;
 }
