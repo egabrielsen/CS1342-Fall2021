@@ -7,10 +7,10 @@ int main() {
   int num = 4;  // what happens if num = 4?
 
   do {
-    num--; 
+    num--;
     count++;
   } while (num > 4);
 
-  cout << count << endl; //
+  cout << count << endl;  //
   return 0;
 }
