@@ -23,10 +23,10 @@ void updateClass(MyClass localClass) { *(localClass.ptr) = 100; }
 
 int main() {
   MyClass obj1;
-  MyClass obj2(obj1);
+  MyClass obj2(obj1);  // copy constructor called
 
   cout << "ptr 1: " << *(obj2.ptr) << endl;
-  updateClass(obj2);
+  updateClass(obj2);  // copy constructor called
   cout << "ptr 1 again: " << *(obj2.ptr) << endl;
   return 0;
 }
