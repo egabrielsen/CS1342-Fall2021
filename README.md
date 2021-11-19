@@ -18,6 +18,7 @@ You will find the following under the sample code directory.
 10. `Chapter11/` - Pointers
 11. `Chapter12/` - Linked Lists, Stacks, Queues
 12. `Chapter13/` - Inheritance and Polymorphism
+13. `Chapter14/` - Exceptions
 
 ### Miscellaneous
 
