@@ -1,17 +1,19 @@
 #include <iostream>
+#include <stdexcept>
+#include <vector>
 
 using namespace std;
 
 int main() {
-  int cost;
-  int numItems;
+  vector<int> numbers;
+  numbers.push_back(1);
 
-  cout << "Enter the price of your item: $";
-  cin >> cost;
-  cout << "How many items did you purchase? ";
-  cin >> numItems;
-
-  cout << "Total Cost: " << cost * numItems << endl;
+  try {
+    // numbers.at(1);  // throw
+    throw out_of_range("Index is out of bounds");
+  } catch (out_of_range &e) {
+    cout << e.what() << endl;
+  }
 
   return 0;
 }

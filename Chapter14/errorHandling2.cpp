@@ -1,5 +1,5 @@
+#include <exception>  // used for runtime_error and exception type
 #include <iostream>
-#include <exception> // used for runtime_error and exception type
 
 using namespace std;
 
@@ -7,6 +7,7 @@ int main() {
   int cost;
   int numItems;
   int *value;
+
   try {
     cout << "Enter the price of your item: $";
     cin >> cost;
@@ -24,15 +25,14 @@ int main() {
     }
 
     cout << "Total Cost: " << cost * numItems << endl;
-    delete value; 
+    delete value;
   } catch (runtime_error &e) {
     cout << "UH OH YOU MESSED UP!" << endl;
-     delete value;
+    delete value;
   } catch (exception &e) {
     cout << e.what() << endl;
-     delete value;
+    delete value;
   }
-  
 
   return 0;
 }

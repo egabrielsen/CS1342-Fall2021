@@ -4,18 +4,18 @@ using namespace std;
 
 class CustomException {
   int errorCode;
-  char* errorMessage;
+  char *errorMessage;
 
-  public: 
-    CustomException(int errorCode, char* errorMessage) {
-      this->errorCode = errorCode;
-      this->errorMessage = errorMessage;
-    }
+ public:
+  CustomException(int errorCode, char *errorMessage) {
+    this->errorCode = errorCode;
+    this->errorMessage = errorMessage;
+  }
 
-    void printError() {
-      cout << "ERROR CODE: " << errorCode << endl;
-      cout << "ERROR MSG: " << errorMessage << endl;
-    }
+  void printError() {
+    cout << "ERROR CODE: " << errorCode << endl;
+    cout << "ERROR MSG: " << errorMessage << endl;
+  }
 };
 
 int main() {
@@ -33,14 +33,13 @@ int main() {
     cin >> numItems;
 
     if (numItems < 0) {
-      throw CustomException(2, (char *)"Number of Items is < 0");
+      throw CustomException(2, static_cast<char *>("Number of Items is < 0"));
     }
 
     cout << "Total Cost: " << cost * numItems << endl;
   } catch (CustomException &e) {
     e.printError();
   }
-  
 
   return 0;
 }

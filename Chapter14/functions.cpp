@@ -1,10 +1,10 @@
+#include <exception>  // used for runtime_error and exception type
 #include <iostream>
-#include <exception> // used for runtime_error and exception type
 
 using namespace std;
-int getPrice() throw (runtime_error);
+int getPrice() throw(runtime_error);
 
-int getPrice() throw (runtime_error)  {
+int getPrice() throw(runtime_error) {
   int cost;
   cout << "Enter the price of your item: $";
   cin >> cost;
@@ -16,7 +16,7 @@ int getPrice() throw (runtime_error)  {
   return cost;
 }
 
-int getNumItems() {
+int getNumItems() throw(runtime_error) {
   int numItems;
   cout << "Enter in the # of items that you purchased: ";
   cin >> numItems;
@@ -31,7 +31,7 @@ int getNumItems() {
 int main() {
   int cost = getPrice();
   int numItems = getNumItems();
-  
+
   try {
     int cost = getPrice();
     int numItems = getNumItems();
@@ -40,7 +40,6 @@ int main() {
   } catch (exception &e) {
     cout << e.what() << endl;
   }
-  
 
   return 0;
 }
