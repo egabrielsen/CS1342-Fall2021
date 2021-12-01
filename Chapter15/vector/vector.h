@@ -12,7 +12,6 @@ class Vector {
   Vector(int);
 
   int getLength();
-  void push_back(T item);
 
   T at(int);
 };
@@ -34,14 +33,6 @@ Vector<T>::Vector(int capacity) {
 template <typename T>
 int Vector<T>::getLength() {
   return this->size;
-}
-
-template <typename T>
-void Vector<T>::push_back(T item) {
-  if (this->size >= this->capacity) {
-    throw std::runtime_error("Exceeded Capacity");
-  }
-  this->data[this->size++] = item;
 }
 
 template <typename T>
